@@ -1,0 +1,56 @@
+public class Main {
+    public static void main(String[] args) {
+        University university = new University("Tech University");
+        Professor professor = new Professor("Mr. Smith", 45);
+        Course course = new Course("Data Structures", 4, 789123);
+
+        university.display();
+        professor.display();
+        course.display();
+    }
+}
+
+class University {
+    private String name;
+
+    public University(String name) {
+        this.name = name;
+    }
+
+    public void display() {
+        System.out.println("University: " + name);
+    }
+}
+
+class Professor {
+    private String name;
+    private int age;
+
+    public Professor(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void display() {
+        System.out.println("Professor Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+class Course {
+    private String name;
+    private int credits;
+    private int barcode;
+
+    public Course(String name, int credits, int barcode) {
+        this.name = name;
+        this.credits = credits;
+        this.barcode = barcode;
+    }
+
+    public void display() {
+        System.out.println("Course Name: " + name);
+        System.out.println("Credits: " + credits);
+        System.out.println("Barcode: " + barcode);
+    }
+}
